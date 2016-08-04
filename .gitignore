@@ -1,7 +1,11 @@
 # Maven
-java7/target
-java8/target
+.java7/target
+.java8/target
 
-.idea/*
-!.idea/codeStyleSettings.xml
-!.idea/encodings.xml
+.java7/idea/*
+!.java7/idea/codeStyleSettings.xml
+!.java7/idea/encodings.xml
+
+.java8/idea/*
+!.java8/idea/codeStyleSettings.xml
+!.java8/idea/encodings.xml
