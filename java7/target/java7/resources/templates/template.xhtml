@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:p="http://primefaces.org/ui">
+
+<f:view>
+    <h:head>
+        <f:facet name="first">
+            <meta charset="utf-8"></meta>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+            <title><ui:insert name="title">Gojava Meetup Java 8</ui:insert></title>
+
+            <meta name="viewport" content="width=device-width,initial-scale=1.0"></meta>
+
+            <!-- Adiciona todos jqueries disponíveis para evitar conflitos será utilizado o último a ser declarado-->
+            <!-- não chamar jQuery.noConflict(); -->
+            <h:outputScript library="primefaces" name="jquery/jquery.js"/>
+        </f:facet>
+        <h:outputStylesheet name="bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+        <h:outputScript name="bootstrap/js/bootstrap.min.js"/>
+    </h:head>
+
+    <h:body>
+        <header>
+            <nav class="navbar-inverse">
+                <ul class="nav nav-pills">
+                    <li>
+                        <a class="nav-item" href="/java7">Home</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <br/>
+
+        <div class="container">
+            <p:growl autoUpdate="true" globalOnly="true"/>
+            <ui:insert name="conteudo"></ui:insert>
+        </div>
+    </h:body>
+</f:view>
+</html>

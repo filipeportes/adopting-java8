@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+<ui:composition template="/resources/templates/template.xhtml">
+    <ui:define name="conteudo">
+        <div class="row">
+            <div class="col-lg-4">
+                <p:chart type="pie" model="#{clienteController.graficoPorSexo}" />
+            </div>
+            <div class="col-lg-4">
+                <p:chart type="pie" model="#{clienteController.graficoPorRegiao}" />
+            </div>
+            <div class="col-lg-4">
+                <p:chart type="pie" model="#{clienteController.graficoPorFaixaEtaria}" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <p:chart type="bar" model="#{clienteController.graficoPorEstadoESexo}" />
+            </div>
+        </div>
+    </ui:define>
+</ui:composition>
+</html>
